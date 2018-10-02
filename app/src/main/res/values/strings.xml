@@ -3,7 +3,10 @@
 
     <string name="app_name">CENG319</string>
     <string name="button1">button1</string>
-    <string name="change_toast">change_toast</string>
+    <string name="button2">button1</string>
+    <string name="dial_toast">Changed to the Dialer</string>
+    <string name="budget_toast">Changed to the Budget activity</string>
+    <string name="activity_name2">Budget Calculator</string>
 
 
 </resources>

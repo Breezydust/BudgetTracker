@@ -11,20 +11,20 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
-    Button mTrueButton;
-    Button mFalseButton;
+    Button button1;
+    Button button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTrueButton = (Button) findViewById(R.id.button1);
-        mTrueButton.setOnClickListener(new View.OnClickListener() {
+        button1 = (Button) findViewById(R.id.button1);
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this,
-                        R.string.change_toast, Toast.LENGTH_SHORT)
+                        R.string.dial_toast, Toast.LENGTH_SHORT)
                         .show();
 
 
@@ -32,12 +32,23 @@ public class MainActivity extends Activity {
                 Intent dial = new Intent(Intent.ACTION_DIAL,number);
                 startActivity(dial);
 
-                //Intent intent = new Intent(MainActivity.this, Activity2.class);
                 //startActivity(new Intent(MainActivity.this, Activity2.class));
 
 
             }
         });
 
+        button2 = (Button) findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,
+                        R.string.budget_toast, Toast.LENGTH_SHORT)
+                        .show();
+                startActivity(new Intent(MainActivity.this, Activity2.class));
+
+
+            }
+});
     }
 }
