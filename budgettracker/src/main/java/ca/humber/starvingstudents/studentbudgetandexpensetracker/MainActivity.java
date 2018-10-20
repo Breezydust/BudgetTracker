@@ -1,54 +1,66 @@
 package ca.humber.starvingstudents.studentbudgetandexpensetracker;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.View;
+import android.support.annotation.NonNull;
+import android.support.design.internal.BottomNavigationItemView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.Toast;
+import android.support.design.widget.BottomNavigationView;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
-    Button button1;
-    Button button2;
+    private ActionBar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button1 = (Button) findViewById(R.id.button1);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this,
-                        R.string.dial_toast, Toast.LENGTH_SHORT)
-                        .show();
+        toolbar = getSupportActionBar();
+        toolbar.setTitle("Home");
 
-
-                Uri number = Uri.parse("tel:6472745967");
-                Intent dial = new Intent(Intent.ACTION_DIAL,number);
-                startActivity(dial);
-
-                //startActivity(new Intent(MainActivity.this, Activity2.class));
-
-
-            }
-        });
-
-        button2 = (Button) findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this,
-                        R.string.budget_toast, Toast.LENGTH_SHORT)
-                        .show();
-                startActivity(new Intent(MainActivity.this, Activity2.class));
-
-
-            }
-});
+        BottomNavigationView navigation = (BottomNavigationView)findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            Fragment fragment;
+            switch (item.getItemId()){
+                case R.id.navigation_budgeting:
+                    toolbar.setTitle("Budgeting");
+                    fragment = new BudgetingActivityFragment();
+                    loadFragment(fragment);
+                    return true;
+                case R.id.navigation_budgetinput:
+                    toolbar.setTitle("Budget Input");
+                    fragment = new BudgetInputActivityFragment();
+                    loadFragment(fragment);
+                    return true;
+                case R.id.navigation_expenseinput:
+                    toolbar.setTitle("Expenses Input");
+                    fragment = new ExpensesActivityFragment();
+                    loadFragment(fragment);
+                    return true;
+                case R.id.navigation_home:
+                    toolbar.setTitle("Home");
+                    return true;
+            }
+            return false;
+        }
+    };
+
+    private void loadFragment(Fragment fragment) {
+        // load fragment
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.container, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
 }

@@ -7,6 +7,13 @@
     <string name="dial_toast">Changed to the Dialer</string>
     <string name="budget_toast">Changed to the Budget activity</string>
     <string name="activity_name2">Budget Calculator</string>
-
+    <string name="budget_input">Budget Input</string>
+    <string name="expense_input">Expense Input</string>
+    <string name="budgeting">Budgeting</string>
+    <string name="home">Home</string>
+    <string name="title_activity_expenses">ExpensesActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_budgeting">BudgetingActivity</string>
+    <string name="title_activity_budget_input">BudgetInputActivity</string>
 
 </resources>

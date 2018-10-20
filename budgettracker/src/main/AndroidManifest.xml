@@ -16,15 +16,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity2"
+        <activity
+            android:name=".BudgetingActivity"
             android:allowBackup="true"
             android:icon="@mipmap/money"
             android:label="@string/activity_name2"
             android:roundIcon="@mipmap/money_values"
             android:supportsRtl="true"
-            android:theme="@style/AppTheme">
-        </activity>
-
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ExpensesActivity"
+            android:label="@string/title_activity_expenses"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BudgetInputActivity"
+            android:label="@string/title_activity_budget_input"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

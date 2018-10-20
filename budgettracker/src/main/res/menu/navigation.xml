@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/navigation_home"
+        android:title="@string/home"
+        android:icon="@drawable/ic_action_name"></item>
+
+    <item android:id="@+id/navigation_budgetinput"
+        android:title="@string/budget_input"
+        android:icon="@drawable/ic_action_name"></item>
+
+    <item android:id="@+id/navigation_expenseinput"
+        android:title="@string/expense_input"
+        android:icon="@drawable/ic_action_name"></item>
+
+    <item android:id="@+id/navigation_budgeting"
+        android:title="@string/budgeting"
+        android:icon="@drawable/ic_action_name"></item>
 
 </menu>
