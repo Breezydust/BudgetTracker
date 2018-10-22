@@ -1,5 +1,6 @@
 package ca.humber.starvingstudents.studentbudgetandexpensetracker;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationItemView;
@@ -10,10 +11,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.support.design.widget.BottomNavigationView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private ActionBar toolbar;
+    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar = getSupportActionBar();
         toolbar.setTitle("Home");
+
+        textView = (TextView)findViewById(R.id.home_text_view);
 
         BottomNavigationView navigation = (BottomNavigationView)findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -34,21 +39,25 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()){
                 case R.id.navigation_budgeting:
                     toolbar.setTitle("Budgeting");
+                    textView.setText("");
                     fragment = new BudgetingActivityFragment();
                     loadFragment(fragment);
                     return true;
                 case R.id.navigation_budgetinput:
                     toolbar.setTitle("Budget Input");
+                    textView.setText("");
                     fragment = new BudgetInputActivityFragment();
                     loadFragment(fragment);
                     return true;
                 case R.id.navigation_expenseinput:
                     toolbar.setTitle("Expenses Input");
+                    textView.setText("");
                     fragment = new ExpensesActivityFragment();
                     loadFragment(fragment);
                     return true;
                 case R.id.navigation_home:
-                    toolbar.setTitle("Home");
+                    finish();
+                    startActivity(getIntent());
                     return true;
             }
             return false;
