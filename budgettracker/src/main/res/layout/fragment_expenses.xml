@@ -8,10 +8,84 @@
     tools:showIn="@layout/activity_expenses">
 
     <TextView
-        android:id="@+id/expensesfragmentview"
+    android:id="@+id/travel_input_textfield"
+    android:layout_width="185dp"
+    android:layout_height="wrap_content"
+    android:text="Monthly travel expense:"
+    app:layout_constraintRight_toLeftOf="@id/travel_input_textbox"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/budget_percent_textfield"/>
+
+    <EditText
+        android:id="@+id/travel_input_textbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This fragment will allow users to input expenses quickly"
+        app:layout_constraintBottom_toTopOf="@id/entertainment_input_textbox"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/travel_input_textfield"
+        android:hint="Enter value in dollars"
+        />
+
+    <TextView
+        android:id="@+id/entertainment_input_textfield"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter budget percentage:"
+        app:layout_constraintRight_toLeftOf="@id/entertainment_input_textbox"
+        app:layout_constraintTop_toBottomOf="@id/travel_input_textfield"
+        app:layout_constraintBottom_toTopOf="@id/budget_goal_textfield"/>
+
+    <EditText
+        android:id="@+id/entertainment_input_textbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/travel_input_textbox"
+        app:layout_constraintBottom_toTopOf="@id/entertainment_input_textbox"
+        app:layout_constraintLeft_toRightOf="@id/entertainment_input_textfield"
+        android:hint="Enter a value in dollars"/>
+
+    <TextView
+        android:id="@+id/grocery_input_textfield"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What is your savings?"
+        app:layout_constraintRight_toLeftOf="@id/grocery_input_textbox"
+        app:layout_constraintTop_toBottomOf="@id/entertainment_input_textfield"
+        app:layout_constraintBottom_toTopOf="@id/miscellaneous_purchases_textfield"
+        />
+
+    <EditText
+        android:id="@+id/grocery_input_textbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/entertainment_input_textbox"
+        app:layout_constraintBottom_toTopOf="@id/miscellaneous_purchases_textbox"
+        app:layout_constraintLeft_toRightOf="@id/grocery_input_textfield"
+        android:hint="Enter value in dollars"/>
+
+    <TextView
+        android:id="@+id/miscellaneous_purchases_textfield"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="How soon do you want to reach this goal?"
+        app:layout_constraintRight_toLeftOf="@id/miscellaneous_purchases_textbox"
+        app:layout_constraintBaseline_toBaselineOf="@id/miscellaneous_purchases_textbox"
+        />
+
+    <EditText
+        android:id="@+id/miscellaneous_purchases_textbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/grocery_input_textbox"
+        app:layout_constraintLeft_toRightOf="@id/miscellaneous_purchases_textfield"
+        android:hint="Number of days"/>
+
+    <Button
+        android:id="@+id/budget_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Budget!"
+        app:layout_constraintTop_toBottomOf="@id/budget_timeline_textfield"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

@@ -15,5 +15,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_budgeting">BudgetingActivity</string>
     <string name="title_activity_budget_input">BudgetInputActivity</string>
+    <string name="travel_entry_input">TravelEntry</string>
 
 </resources>
