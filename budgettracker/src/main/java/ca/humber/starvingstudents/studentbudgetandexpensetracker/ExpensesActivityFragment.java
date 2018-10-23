@@ -1,3 +1,5 @@
+//This fragment allows the user to quickly enter an expense; will pull possible categories from a predetermined list + any user defined categories within budgetinputactivity, and default
+//today's date for time logging
 package ca.humber.starvingstudents.studentbudgetandexpensetracker;
 
 import android.support.v4.app.Fragment;

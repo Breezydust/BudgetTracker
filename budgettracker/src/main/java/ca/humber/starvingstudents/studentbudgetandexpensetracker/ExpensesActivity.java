@@ -1,3 +1,4 @@
+//This activity will show a breakdown of the users expenses per day and per category as well as a history
 package ca.humber.starvingstudents.studentbudgetandexpensetracker;
 
 import android.os.Bundle;
