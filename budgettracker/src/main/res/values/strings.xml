@@ -16,4 +16,13 @@
     <string name="title_activity_budgeting">BudgetingActivity</string>
     <string name="title_activity_budget_input">BudgetInputActivity</string>
 
+    
+    <string-array name="expensecategories">
+        <item>Transportation</item>
+        <item>Food</item>
+        <item>Entertainment</item>
+        <item>Bills</item>
+        <item>Miscellaneous</item>
+        <item>Groceries</item>
+    </string-array>
 </resources>

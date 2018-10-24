@@ -7,13 +7,31 @@
     tools:context=".ExpensesActivityFragment"
     tools:showIn="@layout/activity_expenses">
 
-    <TextView
-        android:id="@+id/expensesfragmentview"
+    <EditText
+        android:id="@+id/expenseinput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This fragment will allow users to input expenses quickly"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        android:hint="Enter your expense" />
+    
+    <Spinner
+        android:id="@+id/categoryspinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/expenseinput"></Spinner>
+
+    <Button
+        android:id="@+id/quickentrybutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quick Entry"
+        app:layout_constraintTop_toBottomOf="@id/expenseinput"
+        app:layout_constraintRight_toLeftOf="@id/expensehistorybutton"/>
+
+    <Button
+        android:id="@+id/expensehistorybutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expense History"
+        app:layout_constraintTop_toBottomOf="@id/expenseinput"
+        app:layout_constraintLeft_toRightOf="@id/quickentrybutton"/>
 </android.support.constraint.ConstraintLayout>

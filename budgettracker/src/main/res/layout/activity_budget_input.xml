@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -20,11 +20,24 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <TextView
-        android:id="@+id/randtextview"
+    <EditText
+        android:id="@+id/customcategoryinput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This activity will eventually show the information entered in the fragment"
-        android:layout_gravity="center"/>
+        android:hint="Enter a custom category for budgeting purposes"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
-</android.support.design.widget.CoordinatorLayout>
+
+    <Button
+        android:id="@+id/savecustomcategorybutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save category"
+        app:layout_constraintTop_toBottomOf="@id/customcategoryinput"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

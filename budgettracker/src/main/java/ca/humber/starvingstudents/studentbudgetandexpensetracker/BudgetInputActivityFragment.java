@@ -12,9 +12,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-/**
- * A placeholder fragment containing a simple view.
- */
 public class BudgetInputActivityFragment extends Fragment {
 
     private EditText incomeentry;

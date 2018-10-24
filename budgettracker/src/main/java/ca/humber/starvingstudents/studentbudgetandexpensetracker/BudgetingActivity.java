@@ -1,4 +1,4 @@
-//this activity will show indepth customisable graphs of spending habits 
+//this activity will show indepth customisable graphs of spending habits
 package ca.humber.starvingstudents.studentbudgetandexpensetracker;
 
 import android.os.Bundle;
