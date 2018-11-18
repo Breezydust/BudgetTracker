@@ -8,9 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
-/**
- * A placeholder fragment containing a simple view.
- */
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.series.BarGraphSeries;
+import com.jjoe64.graphview.series.DataPoint;
+
+
 public class BudgetingActivityFragment extends Fragment {
 
     public BudgetingActivityFragment() {
@@ -19,6 +21,23 @@ public class BudgetingActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_budgeting, container, false);
+        View view = inflater.inflate(R.layout.fragment_budgeting, container, false);
+
+        GraphView bargraph = (GraphView)view.findViewById(R.id.budgetingfragmentbarchart);
+        BarGraphSeries<DataPoint> goalseries = new BarGraphSeries<>(new DataPoint[]{
+           new DataPoint(0,4),
+           new DataPoint(5,5),
+        });
+        goalseries.setSpacing(50);
+        bargraph.addSeries(goalseries);
+
+        BarGraphSeries<DataPoint> spentseries = new BarGraphSeries<>(new DataPoint[]{
+                new DataPoint(2,3),
+                new DataPoint(4,4),
+        });
+        spentseries.setSpacing(50);
+        bargraph.addSeries(spentseries);
+
+    return view;
     }
 }
