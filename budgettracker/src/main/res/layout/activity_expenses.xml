@@ -20,6 +20,149 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="301dp"
+        android:gravity="center_vertical"
+        android:stretchColumns="1">
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="Expense" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Category" />
+
+            <TextView
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="Date" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="$55.00" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Transportation" />
+
+            <TextView
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="Nov 18" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="$8.00" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Food" />
+
+            <TextView
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="Nov 19" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="$5.00" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Miscellaneous" />
+
+            <TextView
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="Oct 5" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="$144.00" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Bills" />
+
+            <TextView
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="Nov 10" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="$66.00" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Groceries" />
+
+            <TextView
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="Nov 8" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="$6.50" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Food" />
+
+            <TextView
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="Nov 14" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="$112.24" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Transportation" />
+
+            <TextView
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="Oct 31" />
+        </TableRow>
+    </TableLayout>
+
 
 
 </android.support.design.widget.CoordinatorLayout>
