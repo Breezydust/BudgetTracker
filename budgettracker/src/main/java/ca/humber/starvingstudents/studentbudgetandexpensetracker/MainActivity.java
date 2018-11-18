@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private float totalbudget;
     private TextView totalbudgetremaning;
     private TextView nextpaydaycount;
+    private TextView maintext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
         nextpaydaycount = (TextView)findViewById(R.id.next_payday);
         nextpaydaycount.append("14");
 
+        maintext = (TextView)findViewById(R.id.main_text);
+
 
         BottomNavigationView navigation = (BottomNavigationView)findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -60,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
                     toolbar.setTitle("Budgeting");
                     totalbudgetremaning.setText("");
                     nextpaydaycount.setText("");
+                    maintext.setText("");
                     fragment = new BudgetingActivityFragment();
                     loadFragment(fragment);
                     return true;
@@ -67,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
                     toolbar.setTitle("Budget Input");
                     totalbudgetremaning.setText("");
                     nextpaydaycount.setText("");
+                    maintext.setText("");
                     fragment = new BudgetInputActivityFragment();
                     loadFragment(fragment);
                     return true;
@@ -74,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
                     toolbar.setTitle("Expenses Input");
                     totalbudgetremaning.setText("");
                     nextpaydaycount.setText("");
+                    maintext.setText("");
                     fragment = new ExpensesActivityFragment();
                     loadFragment(fragment);
                     return true;
