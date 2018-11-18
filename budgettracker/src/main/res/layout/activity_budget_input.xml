@@ -20,24 +20,188 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <EditText
-        android:id="@+id/customcategoryinput"
+
+
+    <TextView
+        android:id="@+id/current_budget_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Enter a custom category for budgeting purposes"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Current total budget is: "
+        android:paddingTop="70dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        />
 
+    <TextView
+        android:id="@+id/transport_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transportation:"
+        app:layout_constraintTop_toBottomOf="@id/current_budget_textview"/>
+
+    <SeekBar
+        android:id="@+id/transport_seekbar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        app:layout_constraintRight_toLeftOf="@id/transport_seekbar_progress"
+        app:layout_constraintTop_toBottomOf="@id/transport_textview" />
+
+    <TextView
+        android:id="@+id/transport_seekbar_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/transport_seekbar"
+        app:layout_constraintTop_toTopOf="@id/transport_seekbar"
+         />
+
+    <TextView
+        android:id="@+id/food_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food:"
+        app:layout_constraintTop_toBottomOf="@id/transport_seekbar" />
+
+    <SeekBar
+        android:id="@+id/food_seekbar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        app:layout_constraintTop_toBottomOf="@id/food_textview"
+        app:layout_constraintRight_toLeftOf="@id/food_seekbar_progress"
+        />
+
+    <TextView
+        android:id="@+id/food_seekbar_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/food_seekbar"
+        app:layout_constraintTop_toTopOf="@id/food_seekbar"/>
+
+    <TextView
+        android:id="@+id/entertainment_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entertainment:"
+        app:layout_constraintTop_toBottomOf="@id/food_seekbar"/>
+
+    <SeekBar
+        android:id="@+id/entertainment_seekbar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        app:layout_constraintTop_toBottomOf="@id/entertainment_textview"
+        app:layout_constraintRight_toLeftOf="@id/entertainment_seekbar_progress"/>
+
+    <TextView
+        android:id="@+id/entertainment_seekbar_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/entertainment_seekbar"
+        app:layout_constraintTop_toTopOf="@id/entertainment_seekbar"/>
+
+    <TextView
+        android:id="@+id/bills_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bills:"
+        app:layout_constraintTop_toBottomOf="@id/entertainment_seekbar"/>
+
+    <SeekBar
+        android:id="@+id/bills_seekbar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        app:layout_constraintTop_toBottomOf="@id/bills_textview"
+        app:layout_constraintRight_toLeftOf="@id/bills_seekbar_progress"/>
+
+    <TextView
+        android:id="@+id/bills_seekbar_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/bills_seekbar"
+        app:layout_constraintTop_toTopOf="@id/bills_seekbar"/>
+
+    <TextView
+        android:id="@+id/misc_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Miscellaneous:"
+        app:layout_constraintTop_toBottomOf="@id/bills_seekbar"/>
+
+    <SeekBar
+        android:id="@+id/misc_seekbar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        app:layout_constraintTop_toBottomOf="@id/misc_textview"
+        app:layout_constraintRight_toLeftOf="@id/misc_seekbar_progress"/>
+
+    <TextView
+        android:id="@+id/misc_seekbar_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/misc_seekbar"
+        app:layout_constraintTop_toTopOf="@id/misc_seekbar"/>
+
+    <TextView
+        android:id="@+id/groceries_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Groceries::"
+        app:layout_constraintTop_toBottomOf="@id/misc_seekbar"/>
+
+    <SeekBar
+        android:id="@+id/groceries_seekbar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        app:layout_constraintTop_toBottomOf="@id/groceries_textview"
+        app:layout_constraintRight_toLeftOf="@id/groceries_seekbar_progress"/>
+
+    <TextView
+        android:id="@+id/groceries_seekbar_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/groceries_seekbar"
+        app:layout_constraintTop_toTopOf="@id/groceries_seekbar"/>
+
+    <TextView
+        android:id="@+id/total_seekbar_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/groceries_seekbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Total amount: "/>
+
+    <TextView
+        android:id="@+id/total_seekbar_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/total_seekbar_textview"
+        app:layout_constraintTop_toTopOf="@id/total_seekbar_textview"/>
 
     <Button
-        android:id="@+id/savecustomcategorybutton"
+        android:id="@+id/budget_save_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save category"
-        app:layout_constraintTop_toBottomOf="@id/customcategoryinput"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        android:text="Save budget"
+        app:layout_constraintLeft_toRightOf="@id/entertainment_textview"
+        app:layout_constraintTop_toBottomOf="@id/total_seekbar_value" />
+
+    <Button
+        android:id="@+id/budget_reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        app:layout_constraintLeft_toRightOf="@id/budget_save_button"
+        app:layout_constraintTop_toBottomOf="@id/total_seekbar_value"/>
 
 </android.support.constraint.ConstraintLayout>

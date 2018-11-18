@@ -47,7 +47,6 @@ public class ExpensesActivityFragment extends Fragment {
         //code to add the user defined categories should go here
 
 
-
         //create the spinner
         ArrayAdapter<String> categoryadapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, finalcategories);
         categoryadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
