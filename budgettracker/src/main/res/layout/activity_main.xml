@@ -26,12 +26,32 @@
         app:labelVisibilityMode="labeled"/>
 
     <TextView
-        android:id="@+id/home_text_view"
+        android:id="@+id/budget_remaining"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Starving Students CENG319 Home Page (Temp)"
+        android:text="Total budget remaining: "
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/next_payday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Days until next payday: "
+        app:layout_constraintTop_toBottomOf="@id/budget_remaining"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/main_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Budget and Expense Tracker"
+        android:textSize="18pt"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/budget_remaining"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
 
