@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CENG319.iml" filepath="$PROJECT_DIR$/CENG319.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CENG319.iml" filepath="$PROJECT_DIR$/CENG319.iml" />
+      <module fileurl="file://$PROJECT_DIR$/budgettracker/budgettracker.iml" filepath="$PROJECT_DIR$/budgettracker/budgettracker.iml" />
       <module fileurl="file://$PROJECT_DIR$/budgettracker/budgettracker.iml" filepath="$PROJECT_DIR$/budgettracker/budgettracker.iml" />
     </modules>
   </component>
