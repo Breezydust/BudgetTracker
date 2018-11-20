@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         toolbar = getSupportActionBar();
-        toolbar.setTitle("@string/home");
+        toolbar.setTitle("Home");
 
         final SharedPreferences budgetvaluespref = this.getSharedPreferences("budgetvalues",MODE_PRIVATE);
         income = budgetvaluespref.getInt("monthlyincome",1);
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             Fragment fragment;
             switch (item.getItemId()){
                 case R.id.navigation_budgeting:
-                    toolbar.setTitle("@string/budgeting");
+                    toolbar.setTitle("Budgeting");
                     totalbudgetremaning.setText("");
                     nextpaydaycount.setText("");
                     maintext.setText("");
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                     loadFragment(fragment);
                     return true;
                 case R.id.navigation_budgetinput:
-                    toolbar.setTitle("@string/budget_input");
+                    toolbar.setTitle("Budget Input");
                     totalbudgetremaning.setText("");
                     nextpaydaycount.setText("");
                     maintext.setText("");
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                     loadFragment(fragment);
                     return true;
                 case R.id.navigation_expenseinput:
-                    toolbar.setTitle("@string/expense_input");
+                    toolbar.setTitle("Expense Input");
                     totalbudgetremaning.setText("");
                     nextpaydaycount.setText("");
                     maintext.setText("");
