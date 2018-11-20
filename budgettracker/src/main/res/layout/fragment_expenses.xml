@@ -11,7 +11,7 @@
         android:id="@+id/expenseinput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Enter your expense" />
+        android:hint="@string/enter_expenses" />
     
     <Spinner
         android:id="@+id/categoryspinner"
@@ -23,7 +23,7 @@
         android:id="@+id/quickentrybutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quick Entry"
+        android:text="@string/quick"
         app:layout_constraintTop_toBottomOf="@id/expenseinput"
         app:layout_constraintRight_toLeftOf="@id/expensehistorybutton"/>
 
@@ -31,7 +31,7 @@
         android:id="@+id/expensehistorybutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Expense History"
+        android:text="@string/expense_history"
         app:layout_constraintTop_toBottomOf="@id/expenseinput"
         app:layout_constraintLeft_toRightOf="@id/quickentrybutton"/>
 </android.support.constraint.ConstraintLayout>

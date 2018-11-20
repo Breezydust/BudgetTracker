@@ -13,14 +13,9 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.support.design.widget.BottomNavigationView;
 import android.widget.TextView;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,31 +33,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-        // Test Code to verify database connectivity
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("testdata");
-
-        myRef.setValue("Hello, World!");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         toolbar = getSupportActionBar();
-        toolbar.setTitle("Home");
+        toolbar.setTitle("@string/home");
 
         final SharedPreferences budgetvaluespref = this.getSharedPreferences("budgetvalues",MODE_PRIVATE);
         income = budgetvaluespref.getInt("monthlyincome",1);
@@ -82,15 +54,13 @@ public class MainActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
-
-
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment fragment;
             switch (item.getItemId()){
                 case R.id.navigation_budgeting:
-                    toolbar.setTitle("Budgeting");
+                    toolbar.setTitle("@string/budgeting");
                     totalbudgetremaning.setText("");
                     nextpaydaycount.setText("");
                     maintext.setText("");
@@ -98,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                     loadFragment(fragment);
                     return true;
                 case R.id.navigation_budgetinput:
-                    toolbar.setTitle("Budget Input");
+                    toolbar.setTitle("@string/budget_input");
                     totalbudgetremaning.setText("");
                     nextpaydaycount.setText("");
                     maintext.setText("");
@@ -106,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                     loadFragment(fragment);
                     return true;
                 case R.id.navigation_expenseinput:
-                    toolbar.setTitle("Expenses Input");
+                    toolbar.setTitle("@string/expense_input");
                     totalbudgetremaning.setText("");
                     nextpaydaycount.setText("");
                     maintext.setText("");
@@ -129,8 +99,5 @@ public class MainActivity extends AppCompatActivity {
         transaction.addToBackStack(null);
         transaction.commit();
     }
-
-
-
 
 }

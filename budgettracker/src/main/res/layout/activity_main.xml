@@ -10,10 +10,7 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
-
-
-    </FrameLayout>
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
@@ -32,7 +29,7 @@
         android:id="@+id/budget_remaining"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Total budget remaining: "
+        android:text="@string/total_remaining"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -42,7 +39,7 @@
         android:id="@+id/next_payday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Days until next payday: "
+        android:text="@string/days_till_payday"
         app:layout_constraintTop_toBottomOf="@id/budget_remaining"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
@@ -51,7 +48,7 @@
         android:id="@+id/main_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Student Budget and Expense Tracker"
+        android:text="@string/title"
         android:textSize="18pt"
         android:gravity="center"
         app:layout_constraintBottom_toTopOf="@id/budget_remaining"

@@ -11,7 +11,7 @@
         android:id="@+id/income_input_textfield"
         android:layout_width="185dp"
         android:layout_height="wrap_content"
-        android:text="Enter your monthly income:"
+        android:text="@string/enter_income"
         app:layout_constraintRight_toLeftOf="@id/income_input_textbox"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/budget_percent_textfield"/>
@@ -23,14 +23,14 @@
         app:layout_constraintBottom_toTopOf="@id/budget_percent_textbox"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toRightOf="@id/income_input_textfield"
-        android:hint="Enter value in dollars"
+        android:hint="@string/enter_dollars"
         />
 
     <TextView
         android:id="@+id/budget_percent_textfield"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter budget percentage:"
+        android:text="@string/enter_percentage"
         app:layout_constraintRight_toLeftOf="@id/budget_percent_textbox"
         app:layout_constraintTop_toBottomOf="@id/income_input_textfield"
         app:layout_constraintBottom_toTopOf="@id/budget_goal_textfield"/>
@@ -42,13 +42,13 @@
         app:layout_constraintTop_toBottomOf="@id/income_input_textbox"
         app:layout_constraintBottom_toTopOf="@id/budget_goal_textbox"
         app:layout_constraintLeft_toRightOf="@id/budget_percent_textfield"
-        android:hint="Enter a percent value"/>
+        android:hint="@string/enter_value"/>
 
     <TextView
         android:id="@+id/budget_goal_textfield"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="What is your savings?"
+        android:text="@string/what_is_savings"
         app:layout_constraintRight_toLeftOf="@id/budget_goal_textbox"
         app:layout_constraintTop_toBottomOf="@id/budget_percent_textfield"
         app:layout_constraintBottom_toTopOf="@id/budget_timeline_textfield"
@@ -61,13 +61,13 @@
         app:layout_constraintTop_toBottomOf="@id/budget_percent_textbox"
         app:layout_constraintBottom_toTopOf="@id/budget_timeline_textbox"
         app:layout_constraintLeft_toRightOf="@id/budget_goal_textfield"
-        android:hint="Enter value in dollars"/>
+        android:hint="@string/enter_dollars"/>
 
     <TextView
         android:id="@+id/budget_timeline_textfield"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="How soon do you want to reach this goal?"
+        android:text="@string/reach_goal"
         app:layout_constraintRight_toLeftOf="@id/budget_timeline_textbox"
         app:layout_constraintBaseline_toBaselineOf="@id/budget_timeline_textbox"
          />
@@ -78,13 +78,13 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/budget_goal_textbox"
         app:layout_constraintLeft_toRightOf="@id/budget_timeline_textfield"
-        android:hint="Number of days"/>
+        android:hint="@string/number_of_days"/>
 
     <Button
         android:id="@+id/budget_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Budget!"
+        android:text="@string/budget"
         app:layout_constraintTop_toBottomOf="@id/budget_timeline_textfield"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -96,7 +96,7 @@
         android:id="@+id/add_cat_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="See your categories"
+        android:text="@string/view_categories"
         app:layout_constraintTop_toBottomOf="@id/budget_button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

@@ -15,8 +15,64 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_budgeting">BudgetingActivity</string>
     <string name="title_activity_budget_input">BudgetInputActivity</string>
+    <string name="action_menu">Menu</string>
 
-    
+    <string name="page">Page 2</string>
+
+    <string name="current">Current total budget is: </string>
+    <string name="transport">Transportation:</string>
+    <string name="food">Food:</string>
+    <string name="entertain">Entertainment:</string>
+    <string name="bills">Bills:</string>
+    <string name="extra">Miscellaneous:</string>
+    <string name="grocery">Groceries:</string>
+    <string name="total">Total amount: </string>
+    <string name="save">Save budget</string>
+    <string name="reset">Reset</string>
+
+    <string name="history">This activity will show history of their budget and their total values/funds/whatever</string>
+
+    <string name="expense">Expense</string>
+    <string name="category">Category</string>
+    <string name="date">Date</string>
+    <string name="value1">$55.00</string>
+    <string name="transportation">Transportation</string>
+    <string name="nov_18">Nov 18</string>
+    <string name="value2">$8.00</string>
+    <string name="food_category">Food</string>
+    <string name="nov_19">Nov 19</string>
+    <string name="value3">$5.00</string>
+    <string name="miscellaneous">Miscellaneous</string>
+    <string name="oct_5">Oct 5</string>
+    <string name="value4">$144.00</string>
+    <string name="bill">Bills</string>
+    <string name="nov_10">Nov 10</string>
+    <string name="value5">$66.00</string>
+    <string name="groceries">Groceries</string>
+    <string name="nov_8">Nov 8</string>
+    <string name="value6">$6.50</string>
+    <string name="nov_14">Nov 14</string>
+    <string name="value7">$112.24</string>
+    <string name="oct_31">Oct 31</string>
+
+    <string name="days_till_payday">Days until next payday: </string>
+    <string name="total_remaining">Total budget remaining: </string>
+    <string name="title">Student Budget and Expense Tracker</string>
+
+    <string name="enter_income">Enter your monthly income:</string>
+    <string name="enter_dollars">Enter value in dollars</string>
+    <string name="enter_percentage">Enter budget percentage:</string>
+    <string name="enter_value">Enter a percent value</string>
+    <string name="what_is_savings">What is your savings?</string>
+    <string name="reach_goal">How soon do you want to reach this goal?</string>
+    <string name="number_of_days">Number of days</string>
+    <string name="budget">Budget!</string>
+    <string name="view_categories">See your categories</string>
+
+    <string name="enter_expenses">Enter your expense</string>
+    <string name="quick">Quick Entry</string>
+    <string name="expense_history">Expense History</string>
+
     <string-array name="expensecategories">
         <item>Transportation</item>
         <item>Food</item>
@@ -25,4 +81,9 @@
         <item>Miscellaneous</item>
         <item>Groceries</item>
     </string-array>
+
+
+
+
+
 </resources>

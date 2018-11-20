@@ -30,136 +30,136 @@
 
             <TextView
                 android:padding="3dip"
-                android:text="Expense" />
+                android:text="@string/expense" />
 
             <TextView
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="Category" />
+                android:text="@string/category" />
 
             <TextView
                 android:gravity="right"
                 android:padding="3dip"
-                android:text="Date" />
+                android:text="@string/date" />
         </TableRow>
 
         <TableRow>
 
             <TextView
                 android:padding="3dip"
-                android:text="$55.00" />
+                android:text="@string/value1" />
 
             <TextView
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="Transportation" />
+                android:text="@string/transportation" />
 
             <TextView
                 android:gravity="right"
                 android:padding="3dip"
-                android:text="Nov 18" />
+                android:text="@string/nov_18" />
         </TableRow>
 
         <TableRow>
 
             <TextView
                 android:padding="3dip"
-                android:text="$8.00" />
+                android:text="@string/value2" />
 
             <TextView
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="Food" />
+                android:text="@string/food_category" />
 
             <TextView
                 android:gravity="right"
                 android:padding="3dip"
-                android:text="Nov 19" />
+                android:text="@string/nov_19" />
         </TableRow>
 
         <TableRow>
 
             <TextView
                 android:padding="3dip"
-                android:text="$5.00" />
+                android:text="@string/value3" />
 
             <TextView
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="Miscellaneous" />
+                android:text="@string/miscellaneous" />
 
             <TextView
                 android:gravity="right"
                 android:padding="3dip"
-                android:text="Oct 5" />
+                android:text="@string/oct_5" />
         </TableRow>
 
         <TableRow>
 
             <TextView
                 android:padding="3dip"
-                android:text="$144.00" />
+                android:text="@string/value4" />
 
             <TextView
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="Bills" />
+                android:text="@string/bill" />
 
             <TextView
                 android:gravity="right"
                 android:padding="3dip"
-                android:text="Nov 10" />
+                android:text="@string/nov_10" />
         </TableRow>
 
         <TableRow>
 
             <TextView
                 android:padding="3dip"
-                android:text="$66.00" />
+                android:text="@string/value5" />
 
             <TextView
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="Groceries" />
+                android:text="@string/groceries" />
 
             <TextView
                 android:gravity="right"
                 android:padding="3dip"
-                android:text="Nov 8" />
+                android:text="@string/nov_8" />
         </TableRow>
 
         <TableRow>
 
             <TextView
                 android:padding="3dip"
-                android:text="$6.50" />
+                android:text="@string/value6" />
 
             <TextView
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="Food" />
+                android:text="@string/food_category" />
 
             <TextView
                 android:gravity="right"
                 android:padding="3dip"
-                android:text="Nov 14" />
+                android:text="@string/nov_14" />
         </TableRow>
 
         <TableRow>
 
             <TextView
                 android:padding="3dip"
-                android:text="$112.24" />
+                android:text="@string/value7" />
 
             <TextView
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="Transportation" />
+                android:text="@string/transportation" />
 
             <TextView
                 android:gravity="right"
                 android:padding="3dip"
-                android:text="Oct 31" />
+                android:text="@string/oct_31" />
         </TableRow>
     </TableLayout>
 

@@ -26,7 +26,7 @@
         android:id="@+id/current_budget_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Current total budget is: "
+        android:text="@string/current"
         android:paddingTop="70dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -36,7 +36,7 @@
         android:id="@+id/transport_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Transportation:"
+        android:text="@string/transport"
         app:layout_constraintTop_toBottomOf="@id/current_budget_textview"/>
 
     <SeekBar
@@ -60,7 +60,7 @@
         android:id="@+id/food_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Food:"
+        android:text="@string/food"
         app:layout_constraintTop_toBottomOf="@id/transport_seekbar" />
 
     <SeekBar
@@ -84,7 +84,7 @@
         android:id="@+id/entertainment_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Entertainment:"
+        android:text="@string/entertain"
         app:layout_constraintTop_toBottomOf="@id/food_seekbar"/>
 
     <SeekBar
@@ -107,7 +107,7 @@
         android:id="@+id/bills_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bills:"
+        android:text="@string/bills"
         app:layout_constraintTop_toBottomOf="@id/entertainment_seekbar"/>
 
     <SeekBar
@@ -130,7 +130,7 @@
         android:id="@+id/misc_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Miscellaneous:"
+        android:text="@string/extra"
         app:layout_constraintTop_toBottomOf="@id/bills_seekbar"/>
 
     <SeekBar
@@ -153,7 +153,7 @@
         android:id="@+id/groceries_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Groceries::"
+        android:text="@string/grocery"
         app:layout_constraintTop_toBottomOf="@id/misc_seekbar"/>
 
     <SeekBar
@@ -179,7 +179,7 @@
         app:layout_constraintTop_toBottomOf="@id/groceries_seekbar"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:text="Total amount: "/>
+        android:text="@string/total"/>
 
     <TextView
         android:id="@+id/total_seekbar_value"
@@ -192,7 +192,7 @@
         android:id="@+id/budget_save_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save budget"
+        android:text="@string/save"
         app:layout_constraintLeft_toRightOf="@id/entertainment_textview"
         app:layout_constraintTop_toBottomOf="@id/total_seekbar_value" />
 
@@ -200,7 +200,7 @@
         android:id="@+id/budget_reset_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Reset"
+        android:text="@string/reset"
         app:layout_constraintLeft_toRightOf="@id/budget_save_button"
         app:layout_constraintTop_toBottomOf="@id/total_seekbar_value"/>
 
