@@ -16,7 +16,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.support.design.widget.BottomNavigationView;
 import android.widget.TextView;
-
+//test comment
 public class MainActivity extends AppCompatActivity {
 
     private ActionBar toolbar;
