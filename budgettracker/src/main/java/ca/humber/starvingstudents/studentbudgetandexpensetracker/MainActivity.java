@@ -37,11 +37,28 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
         // Test Code to verify database connectivity
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message");
+        DatabaseReference myRef = database.getReference("testdata");
 
         myRef.setValue("Hello, World!");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         toolbar = getSupportActionBar();
