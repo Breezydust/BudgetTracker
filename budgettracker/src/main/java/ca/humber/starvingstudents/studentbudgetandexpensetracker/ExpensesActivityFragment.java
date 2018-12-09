@@ -15,9 +15,17 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
+import java.util.Random;
 
 public class ExpensesActivityFragment extends Fragment {
 
@@ -25,6 +33,8 @@ public class ExpensesActivityFragment extends Fragment {
     private Spinner categoryselect;
     private Button quickentry;
     private Button expensehistory;
+    FirebaseDatabase mDatabase;
+    public int EID = 1;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -58,15 +68,27 @@ public class ExpensesActivityFragment extends Fragment {
         quickentry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String expenseentry = expenseinput.getText().toString();
-                
+                final String expenseentry = expenseinput.getText().toString();
+
                 if(TextUtils.isEmpty(expenseentry)){
                     expenseinput.setError("Input can't be empty");
                 }
-                else{
-                    //Placeholder - actual implementation will be saving the expense entry
-                    Toast.makeText(getActivity(), "Entry saved", Toast.LENGTH_LONG).show();
+                else {
+                    mDatabase = FirebaseDatabase.getInstance();
+                    DatabaseReference myRef = mDatabase.getReference("expenses");
+
+
+                    String date = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+                    double expense = Double.parseDouble(expenseentry);
+                    String category = categoryselect.getSelectedItem().toString();
+
+                    Expense new_Expense = new Expense(EID,date,expense,category);
+
+                    myRef.child(Integer.toString(EID)).setValue(new_Expense);
+                    EID++;
                 }
+
+                    Toast.makeText(getActivity(), "Entry saved", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -80,4 +102,26 @@ public class ExpensesActivityFragment extends Fragment {
 
         return view;
     }
+
+}
+
+class Expense {
+    double expenseID;
+    String date;
+    double expense;
+    String category;
+
+    public Expense() {
+
+    }
+
+    public Expense(double expenseID, String date, double expense, String category) {
+        this.expenseID = expenseID;
+        this.date = date;
+        this.expense = expense;
+        this.category = category;
+    }
+
+
+
 }
