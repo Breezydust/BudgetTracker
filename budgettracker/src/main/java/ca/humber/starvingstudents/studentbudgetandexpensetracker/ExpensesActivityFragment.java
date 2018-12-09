@@ -1,5 +1,7 @@
 //This fragment allows the user to quickly enter an expense; will pull possible categories from a predetermined list + any user defined categories within budgetinputactivity, and default
 //today's date for time logging
+//Team name: Starving Students
+
 package ca.humber.starvingstudents.studentbudgetandexpensetracker;
 
 import android.content.Intent;
@@ -74,6 +76,7 @@ public class ExpensesActivityFragment extends Fragment {
                     expenseinput.setError("Input can't be empty");
                 }
                 else {
+                    //open firebase
                     mDatabase = FirebaseDatabase.getInstance();
                     DatabaseReference myRef = mDatabase.getReference("expenses");
 
@@ -82,13 +85,17 @@ public class ExpensesActivityFragment extends Fragment {
                     double expense = Double.parseDouble(expenseentry);
                     String category = categoryselect.getSelectedItem().toString();
 
+                    //create an Expense object with the values found in textEdits
                     Expense new_Expense = new Expense(EID,date,expense,category);
 
+                    //write to firebase and increment ID
                     myRef.child(Integer.toString(EID)).setValue(new_Expense);
                     EID++;
+                    //Toast for confirmation
+                    Toast.makeText(getActivity(), "Entry saved", Toast.LENGTH_LONG).show();
                 }
 
-                    Toast.makeText(getActivity(), "Entry saved", Toast.LENGTH_LONG).show();
+
             }
         });
 
@@ -105,6 +112,7 @@ public class ExpensesActivityFragment extends Fragment {
 
 }
 
+//class to handle sending a JSON object to Firebase
 class Expense {
     double expenseID;
     String date;
@@ -112,7 +120,7 @@ class Expense {
     String category;
 
     public Expense() {
-
+        //public constructor default
     }
 
     public Expense(double expenseID, String date, double expense, String category) {

@@ -1,4 +1,5 @@
 //this fragment allows the user to input their income, percent of income they want to save/budget, their savings goal, and the timeline for saving. it links to the full budget activity
+//Team name: Starving Students
 
 package ca.humber.starvingstudents.studentbudgetandexpensetracker;
 

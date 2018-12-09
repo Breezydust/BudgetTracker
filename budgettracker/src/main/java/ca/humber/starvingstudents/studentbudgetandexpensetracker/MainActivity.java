@@ -1,5 +1,6 @@
 //Main activity is the home page. This will feature the amount of money left in teh day for 3 of the user's favorite categories, as well as a countdown to next payday (in days)
 //as well as an info button showing off the features of the app
+//Team name: Starving Students
 
 package ca.humber.starvingstudents.studentbudgetandexpensetracker;
 

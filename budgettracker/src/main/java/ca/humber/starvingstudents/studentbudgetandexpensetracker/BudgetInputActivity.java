@@ -1,4 +1,5 @@
 //This activity will allow the user to sub-categorise their budget and create different custom categories. These categories will be fed into the expenses fragment as well.
+//Team name: Starving Students
 
 package ca.humber.starvingstudents.studentbudgetandexpensetracker;
 

@@ -1,12 +1,18 @@
 //This activity will show a breakdown of the users expenses per day and per category as well as a history
+//Team name: Starving Students
+
 package ca.humber.starvingstudents.studentbudgetandexpensetracker;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -23,46 +29,50 @@ public class ExpensesActivity extends AppCompatActivity {
 
     public TableLayout table;
     FirebaseDatabase mDatabase;
+    //public int i = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expenses);
 
+
+
         table = (TableLayout)findViewById(R.id.expense_table);
 
+        //connect to firebase for reading
         mDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = mDatabase.getReference("expenses");
-        myRef.addValueEventListener(new ValueEventListener() {
+        DatabaseReference myRef = mDatabase.getReference();
+        myRef.child("expenses").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot ds : dataSnapshot.getChildren()){
-                    int i = 1;
-                    String category = ds.child(Integer.toString(i)).child("category").getValue(String.class);
-                    Double expense = ds.child(Integer.toString(i)).child("expense").getValue(Double.class);
-                    String date = ds.child(Integer.toString(i)).child("date").getValue(String.class);
+                        //Get the values stored in each JSON object and assign them to variables
+                        String category = ds.child("category").getValue(String.class);
+                        Double expense = ds.child("expense").getValue(Double.class);
+                        String date = ds.child("date").getValue(String.class);
 
-                    //Double expense = Double.parseDouble(expensestr);
 
-                    Toast.makeText(ExpensesActivity.this, date, Toast.LENGTH_SHORT).show();
+                        //code to add table rows - not currently working
+                        TableRow row = new TableRow(getBaseContext());
+                        TableRow.LayoutParams lp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
+                        row.setLayoutParams(lp);
+                        TextView catTV = new TextView(getBaseContext());
+                        TextView expTV = new TextView(getBaseContext());
+                        TextView dateTV = new TextView(getBaseContext());
 
-                    TableRow row = new TableRow(getBaseContext());
-                    TableRow.LayoutParams lp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
-                    row.setLayoutParams(lp);
-                    TextView catTV = new TextView(getBaseContext());
-                    TextView expTV = new TextView(getBaseContext());
-                    TextView dateTV = new TextView(getBaseContext());
+                        catTV.setText(category);
+                        row.addView(catTV);
+                        expTV.setText(Double.toString(expense));
+                        row.addView(expTV);
+                        dateTV.setText(date);
+                        row.addView(dateTV);
 
-                    catTV.setText(category);
-                    //expTV.setText(Double.toString(expense));
-                    dateTV.setText(date);
 
-                    row.addView(catTV);
-                    row.addView(expTV);
-                    row.addView(dateTV);
-                    table.addView(row,i-1);
+                        table.addView(row,new TableLayout.LayoutParams(TableLayout.LayoutParams.WRAP_CONTENT,TableLayout.LayoutParams.WRAP_CONTENT));
 
-                    i++;
+                        //i++;
+
                 }
             }
 

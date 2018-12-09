@@ -1,4 +1,5 @@
 //this fragment will show a small graph of 1-week spending trends
+//Team name: Starving Students
 package ca.humber.starvingstudents.studentbudgetandexpensetracker;
 
 import android.support.v4.app.Fragment;

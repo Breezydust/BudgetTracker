@@ -27,7 +27,6 @@
         android:stretchColumns="1"
         android:id="@+id/expense_table">
 
-
     </TableLayout>
 
 </android.support.design.widget.CoordinatorLayout>
