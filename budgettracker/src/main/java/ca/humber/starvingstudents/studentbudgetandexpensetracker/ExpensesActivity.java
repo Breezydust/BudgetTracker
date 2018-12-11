@@ -54,7 +54,7 @@ public class ExpensesActivity extends AppCompatActivity {
 
 
                         //code to add table rows - not currently working
-                        TableRow row = new TableRow(getBaseContext());
+                        TableRow row = new TableRow(getApplicationContext());
                         TableRow.LayoutParams lp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
                         row.setLayoutParams(lp);
                         TextView catTV = new TextView(getBaseContext());
