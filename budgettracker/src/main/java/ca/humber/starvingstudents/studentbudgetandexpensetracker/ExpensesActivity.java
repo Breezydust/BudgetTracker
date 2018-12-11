@@ -14,10 +14,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.TableRow.LayoutParams;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -27,19 +29,25 @@ import com.google.firebase.database.ValueEventListener;
 
 public class ExpensesActivity extends AppCompatActivity {
 
-    public TableLayout table;
+    public TableLayout tl;
+    public TableRow tr;
+    public TextView test1;
     FirebaseDatabase mDatabase;
     //public int i = 1;
+
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expenses);
 
-
-
-        table = (TableLayout)findViewById(R.id.expense_table);
-
+         test1  = (TextView)findViewById(R.id.tr1);
+         tl = (TableLayout)findViewById(R.id.expense_table);
+         tr = new TableRow(this);
         //connect to firebase for reading
         mDatabase = FirebaseDatabase.getInstance();
         DatabaseReference myRef = mDatabase.getReference();
@@ -52,8 +60,12 @@ public class ExpensesActivity extends AppCompatActivity {
                         Double expense = ds.child("expense").getValue(Double.class);
                         String date = ds.child("date").getValue(String.class);
 
+                  //code to add table rows - not currently working
+                      //  tr.setLayoutParams(new TableRow.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+                       // test1.setText(category);
+                        //tl.addView(tr, new TableLayout.LayoutParams(TableLayout.LayoutParams.FILL_PARENT,LayoutParams.WRAP_CONTENT));
+                    //Toast.makeText(getBaseContext(), "test1", Toast.LENGTH_SHORT).show();
 
-                        //code to add table rows - not currently working
                         TableRow row = new TableRow(getApplicationContext());
                         TableRow.LayoutParams lp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
                         row.setLayoutParams(lp);
@@ -69,7 +81,7 @@ public class ExpensesActivity extends AppCompatActivity {
                         row.addView(dateTV);
 
 
-                        table.addView(row,new TableLayout.LayoutParams(TableLayout.LayoutParams.WRAP_CONTENT,TableLayout.LayoutParams.WRAP_CONTENT));
+                    //    table.addView(row,new TableLayout.LayoutParams(TableLayout.LayoutParams.WRAP_CONTENT,TableLayout.LayoutParams.WRAP_CONTENT));
 
                         //i++;
 

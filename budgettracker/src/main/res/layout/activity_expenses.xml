@@ -28,14 +28,17 @@
         android:id="@+id/expense_table">
     <TableRow>
         <TextView
-            android:text="test1"
+            android:text="left"
+            android:id="@+id/tr1"
             android:padding="3dip" />
         <TextView
-            android:text="test2"
+            android:text="right"
+            android:id="@+id/tr2"
             android:gravity="right"
             android:padding="3dip" />
     </TableRow>
-        
+
+
 
     </TableLayout>
 
