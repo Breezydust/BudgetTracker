@@ -39,13 +39,14 @@ public class MainActivity extends AppCompatActivity {
         final SharedPreferences budgetvaluespref = this.getSharedPreferences("budgetvalues",MODE_PRIVATE);
         income = budgetvaluespref.getInt("monthlyincome",1);
         budgetpercent = budgetvaluespref.getInt("budgetpercentage",1);
+
         totalbudget = (income * budgetpercent) / 100;
 
         totalbudgetremaning = (TextView)findViewById(R.id.budget_remaining);
         totalbudgetremaning.append(Float.toString(totalbudget));
 
         nextpaydaycount = (TextView)findViewById(R.id.next_payday);
-        nextpaydaycount.append("14");
+        nextpaydaycount.append("7");
 
         maintext = (TextView)findViewById(R.id.main_text);
 

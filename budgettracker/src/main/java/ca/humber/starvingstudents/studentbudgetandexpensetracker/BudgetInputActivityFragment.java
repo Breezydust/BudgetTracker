@@ -18,6 +18,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class BudgetInputActivityFragment extends Fragment {
 
     private EditText incomeentry;
@@ -85,6 +88,17 @@ public class BudgetInputActivityFragment extends Fragment {
                             budgetvaluespref.edit().putInt("budgetpercentage",Integer.parseInt(percentval)).apply();
                             budgetvaluespref.edit().putInt("savingsgoal",Integer.parseInt(goalval)).apply();
                             budgetvaluespref.edit().putInt("timeline",Integer.parseInt(timelineval)).apply();
+                            FirebaseDatabase database = FirebaseDatabase.getInstance();
+                            DatabaseReference myRef = database.getReference("Income");
+                            myRef.setValue(incomeval);
+                            DatabaseReference myRef1 = database.getReference("Budget Percent");
+                            myRef1.setValue(percentval);
+                            DatabaseReference myRef3 = database.getReference("Savings Goal");
+                            myRef3.setValue(goalval);
+                            DatabaseReference myRef4 = database.getReference("Days until goal");
+                            myRef4.setValue(timelineval);
+
+
 
                             Toast.makeText(getContext(), "Data saved!", Toast.LENGTH_SHORT).show();
                         }
